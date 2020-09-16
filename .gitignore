@@ -1,0 +1,8 @@
+# 忽略所有的__pycache__文件夹
+.__pycache__
+
+# 忽略build文件夹
+.build
+
+# 忽略dist文件夹
+.dist
