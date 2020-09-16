@@ -6,3 +6,6 @@ build/
 
 # 忽略dist文件夹
 dist/
+
+# 忽略skydataTool.spec文件
+skydataTool.spec
