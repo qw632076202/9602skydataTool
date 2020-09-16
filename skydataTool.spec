@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['skydataTool.py'],
-             pathex=['C:\\Users\\1011183\\项目归档\\skydata分离数据工具\\skydataTool'],
+             pathex=['C:\\Users\\1011183\\项目归档\\9602skydata分离数据工具\\9602skydataTool'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -30,4 +30,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=False , icon='skydataTool4.ico')
+          console=False , icon='icon\\skydataTool3.ico')
