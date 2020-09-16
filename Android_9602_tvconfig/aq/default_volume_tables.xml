@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2015 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- Default Volume Tables included by Audio Policy Configuration file -->
+<!-- Full Default Volume table for all device category -->
+<volumes>
+    <reference name="FULL_SCALE_VOLUME_CURVE">
+    <!-- Full Scale reference Volume Curve -->
+        <point>0,0</point>
+        <point>100,0</point>
+    </reference>
+    <reference name="SILENT_VOLUME_CURVE">
+        <point>0,-9600</point>
+        <point>100,-9600</point>
+    </reference>
+    <reference name="DEFAULT_SYSTEM_VOLUME_CURVE">
+    <!-- Default System reference Volume Curve -->
+        <point>1,-2400</point>
+        <point>33,-1800</point>
+        <point>66,-1200</point>
+        <point>100,-600</point>
+    </reference>
+    <reference name="DEFAULT_MEDIA_VOLUME_CURVE">
+    <!-- Default Media reference Volume Curve -->
+        <point>1,-5800</point>
+        <point>20,-4000</point>
+        <point>60,-1700</point>
+        <point>100,0</point>
+    </reference>
+    <reference name="DEFAULT_DEVICE_CATEGORY_HEADSET_VOLUME_CURVE">
+    <!--Default Volume Curve -->
+        <point>1,-4950</point>
+        <point>33,-3350</point>
+        <point>66,-1700</point>
+        <point>100,0</point>
+    </reference>
+    <reference name="DEFAULT_DEVICE_CATEGORY_SPEAKER_VOLUME_CURVE">
+    <!-- Default is Speaker Media Volume Curve -->
+        <point>1,-5800</point>
+        <point>20,-4000</point>
+        <point>60,-1700</point>
+        <point>100,0</point>
+    </reference>
+    <reference name="DEFAULT_DEVICE_CATEGORY_EARPIECE_VOLUME_CURVE">
+    <!--Default Volume Curve -->
+        <point>1,-4950</point>
+        <point>33,-3350</point>
+        <point>66,-1700</point>
+        <point>100,0</point>
+    </reference>
+    <reference name="DEFAULT_DEVICE_CATEGORY_EXT_MEDIA_VOLUME_CURVE">
+    <!-- Default is Ext Media System Volume Curve -->
+        <point>1,-5800</point>
+        <point>20,-4000</point>
+        <point>60,-2100</point>
+        <point>100,-1000</point>
+    </reference>
+    <reference name="DTV">
+    <!-- Default DTV reference Volume Curve -->
+    <point>0,-11500</point>
+<point>1,-5308</point>
+<point>2,-4898</point>
+<point>3,-4488</point>
+<point>4,-4248</point>
+<point>5,-4108</point>
+<point>6,-3878</point>
+<point>7,-3748</point>
+<point>8,-3618</point>
+<point>9,-3553</point>
+<point>10,-3494</point>
+<point>11,-3358</point>
+<point>12,-3222</point>
+<point>13,-3086</point>
+<point>14,-2950</point>
+<point>15,-2814</point>
+<point>16,-2678</point>
+<point>17,-2542</point>
+<point>18,-2406</point>
+<point>19,-2270</point>
+<point>20,-2134</point>
+<point>21,-2102</point>
+<point>22,-2070</point>
+<point>23,-2038</point>
+<point>24,-2006</point>
+<point>25,-1974</point>
+<point>26,-1942</point>
+<point>27,-1910</point>
+<point>28,-1878</point>
+<point>29,-1846</point>
+<point>30,-1814</point>
+<point>31,-1797</point>
+<point>32,-1780</point>
+<point>33,-1763</point>
+<point>34,-1746</point>
+<point>35,-1729</point>
+<point>36,-1712</point>
+<point>37,-1695</point>
+<point>38,-1678</point>
+<point>39,-1661</point>
+<point>40,-1644</point>
+<point>41,-1632</point>
+<point>42,-1620</point>
+<point>43,-1608</point>
+<point>44,-1596</point>
+<point>45,-1584</point>
+<point>46,-1572</point>
+<point>47,-1560</point>
+<point>48,-1548</point>
+<point>49,-1536</point>
+<point>50,-1524</point>
+<point>51,-1507</point>
+<point>52,-1490</point>
+<point>53,-1473</point>
+<point>54,-1456</point>
+<point>55,-1439</point>
+<point>56,-1422</point>
+<point>57,-1405</point>
+<point>58,-1388</point>
+<point>59,-1371</point>
+<point>60,-1354</point>
+<point>61,-1341</point>
+<point>62,-1328</point>
+<point>63,-1315</point>
+<point>64,-1302</point>
+<point>65,-1289</point>
+<point>66,-1276</point>
+<point>67,-1263</point>
+<point>68,-1250</point>
+<point>69,-1237</point>
+<point>70,-1224</point>
+<point>71,-1206</point>
+<point>72,-1188</point>
+<point>73,-1170</point>
+<point>74,-1152</point>
+<point>75,-1134</point>
+<point>76,-1116</point>
+<point>77,-1098</point>
+<point>78,-1080</point>
+<point>79,-1062</point>
+<point>80,-1044</point>
+<point>81,-1032</point>
+<point>82,-1020</point>
+<point>83,-1008</point>
+<point>84,-996</point>
+<point>85,-984</point>
+<point>86,-972</point>
+<point>87,-960</point>
+<point>88,-948</point>
+<point>89,-936</point>
+<point>90,-924</point>
+<point>91,-913</point>
+<point>92,-905</point>
+<point>93,-897</point>
+<point>94,-889</point>
+<point>95,-881</point>
+<point>96,-873</point>
+<point>97,-865</point>
+<point>98,-857</point>
+<point>99,-848</point>
+<point>100,-840</point>
+    </reference>
+    <reference name="ATV">
+    <!-- Default ATV reference Volume Curve -->
+		<point>0,-11500</point>
+<point>1,-5328</point>
+<point>2,-4923</point>
+<point>3,-4518</point>
+<point>4,-4273</point>
+<point>5,-4028</point>
+<point>6,-3898</point>
+<point>7,-3768</point>
+<point>8,-3638</point>
+<point>9,-3573</point>
+<point>10,-3508</point>
+<point>11,-3368</point>
+<point>12,-3228</point>
+<point>13,-3088</point>
+<point>14,-2948</point>
+<point>15,-2808</point>
+<point>16,-2668</point>
+<point>17,-2528</point>
+<point>18,-2388</point>
+<point>19,-2248</point>
+<point>20,-2108</point>
+<point>21,-2078</point>
+<point>22,-2048</point>
+<point>23,-2018</point>
+<point>24,-1988</point>
+<point>25,-1958</point>
+<point>26,-1928</point>
+<point>27,-1898</point>
+<point>28,-1868</point>
+<point>29,-1838</point>
+<point>30,-1808</point>
+<point>31,-1790</point>
+<point>32,-1772</point>
+<point>33,-1754</point>
+<point>34,-1736</point>
+<point>35,-1718</point>
+<point>36,-1700</point>
+<point>37,-1682</point>
+<point>38,-1664</point>
+<point>39,-1646</point>
+<point>40,-1628</point>
+<point>41,-1616</point>
+<point>42,-1604</point>
+<point>43,-1592</point>
+<point>44,-1580</point>
+<point>45,-1568</point>
+<point>46,-1556</point>
+<point>47,-1544</point>
+<point>48,-1532</point>
+<point>49,-1520</point>
+<point>50,-1508</point>
+<point>51,-1490</point>
+<point>52,-1472</point>
+<point>53,-1454</point>
+<point>54,-1436</point>
+<point>55,-1418</point>
+<point>56,-1400</point>
+<point>57,-1382</point>
+<point>58,-1364</point>
+<point>59,-1346</point>
+<point>60,-1328</point>
+<point>61,-1316</point>
+<point>62,-1304</point>
+<point>63,-1292</point>
+<point>64,-1280</point>
+<point>65,-1268</point>
+<point>66,-1256</point>
+<point>67,-1244</point>
+<point>68,-1232</point>
+<point>69,-1220</point>
+<point>70,-1208</point>
+<point>71,-1190</point>
+<point>72,-1172</point>
+<point>73,-1154</point>
+<point>74,-1136</point>
+<point>75,-1118</point>
+<point>76,-1100</point>
+<point>77,-1082</point>
+<point>78,-1064</point>
+<point>79,-1046</point>
+<point>80,-1028</point>
+<point>81,-1017</point>
+<point>82,-1006</point>
+<point>83,-995</point>
+<point>84,-984</point>
+<point>85,-973</point>
+<point>86,-962</point>
+<point>87,-951</point>
+<point>88,-940</point>
+<point>89,-929</point>
+<point>90,-918</point>
+<point>91,-907</point>
+<point>92,-896</point>
+<point>93,-885</point>
+<point>94,-874</point>
+<point>95,-863</point>
+<point>96,-852</point>
+<point>97,-841</point>
+<point>98,-830</point>
+<point>99,-819</point>
+<point>100,-808</point>
+
+    </reference>
+    <reference name="HDMI">
+    <!-- Default HDMI reference Volume Curve -->
+		<point>0,-11500</point>
+<point>1,-5308</point>
+<point>2,-4898</point>
+<point>3,-4488</point>
+<point>4,-4248</point>
+<point>5,-4108</point>
+<point>6,-3878</point>
+<point>7,-3748</point>
+<point>8,-3618</point>
+<point>9,-3553</point>
+<point>10,-3494</point>
+<point>11,-3358</point>
+<point>12,-3222</point>
+<point>13,-3086</point>
+<point>14,-2950</point>
+<point>15,-2814</point>
+<point>16,-2678</point>
+<point>17,-2542</point>
+<point>18,-2406</point>
+<point>19,-2270</point>
+<point>20,-2134</point>
+<point>21,-2102</point>
+<point>22,-2070</point>
+<point>23,-2038</point>
+<point>24,-2006</point>
+<point>25,-1974</point>
+<point>26,-1942</point>
+<point>27,-1910</point>
+<point>28,-1878</point>
+<point>29,-1846</point>
+<point>30,-1814</point>
+<point>31,-1797</point>
+<point>32,-1780</point>
+<point>33,-1763</point>
+<point>34,-1746</point>
+<point>35,-1729</point>
+<point>36,-1712</point>
+<point>37,-1695</point>
+<point>38,-1678</point>
+<point>39,-1661</point>
+<point>40,-1644</point>
+<point>41,-1632</point>
+<point>42,-1620</point>
+<point>43,-1608</point>
+<point>44,-1596</point>
+<point>45,-1584</point>
+<point>46,-1572</point>
+<point>47,-1560</point>
+<point>48,-1548</point>
+<point>49,-1536</point>
+<point>50,-1524</point>
+<point>51,-1507</point>
+<point>52,-1490</point>
+<point>53,-1473</point>
+<point>54,-1456</point>
+<point>55,-1439</point>
+<point>56,-1422</point>
+<point>57,-1405</point>
+<point>58,-1388</point>
+<point>59,-1371</point>
+<point>60,-1354</point>
+<point>61,-1341</point>
+<point>62,-1328</point>
+<point>63,-1315</point>
+<point>64,-1302</point>
+<point>65,-1289</point>
+<point>66,-1276</point>
+<point>67,-1263</point>
+<point>68,-1250</point>
+<point>69,-1237</point>
+<point>70,-1224</point>
+<point>71,-1206</point>
+<point>72,-1188</point>
+<point>73,-1170</point>
+<point>74,-1152</point>
+<point>75,-1134</point>
+<point>76,-1116</point>
+<point>77,-1098</point>
+<point>78,-1080</point>
+<point>79,-1062</point>
+<point>80,-1044</point>
+<point>81,-1032</point>
+<point>82,-1020</point>
+<point>83,-1008</point>
+<point>84,-996</point>
+<point>85,-984</point>
+<point>86,-972</point>
+<point>87,-960</point>
+<point>88,-948</point>
+<point>89,-936</point>
+<point>90,-924</point>
+<point>91,-913</point>
+<point>92,-905</point>
+<point>93,-897</point>
+<point>94,-889</point>
+<point>95,-881</point>
+<point>96,-873</point>
+<point>97,-865</point>
+<point>98,-857</point>
+<point>99,-848</point>
+<point>100,-840</point>
+    </reference>
+    <reference name="CVBS">
+    <!-- Default CVBS reference Volume Curve -->
+		<point>0,-11500</point>
+<point>1,-5308</point>
+<point>2,-4898</point>
+<point>3,-4488</point>
+<point>4,-4248</point>
+<point>5,-4008</point>
+<point>6,-3878</point>
+<point>7,-3748</point>
+<point>8,-3618</point>
+<point>9,-3553</point>
+<point>10,-3478</point>
+<point>11,-3336</point>
+<point>12,-3194</point>
+<point>13,-3052</point>
+<point>14,-2910</point>
+<point>15,-2768</point>
+<point>16,-2626</point>
+<point>17,-2484</point>
+<point>18,-2342</point>
+<point>19,-2200</point>
+<point>20,-2058</point>
+<point>21,-2031</point>
+<point>22,-2000</point>
+<point>23,-1969</point>
+<point>24,-1938</point>
+<point>25,-1907</point>
+<point>26,-1876</point>
+<point>27,-1845</point>
+<point>28,-1814</point>
+<point>29,-1783</point>
+<point>30,-1752</point>
+<point>31,-1734</point>
+<point>32,-1716</point>
+<point>33,-1698</point>
+<point>34,-1680</point>
+<point>35,-1662</point>
+<point>36,-1644</point>
+<point>37,-1626</point>
+<point>38,-1608</point>
+<point>39,-1590</point>
+<point>40,-1572</point>
+<point>41,-1551</point>
+<point>42,-1538</point>
+<point>43,-1525</point>
+<point>44,-1512</point>
+<point>45,-1499</point>
+<point>46,-1486</point>
+<point>47,-1473</point>
+<point>48,-1460</point>
+<point>49,-1447</point>
+<point>50,-1434</point>
+<point>51,-1416</point>
+<point>52,-1400</point>
+<point>53,-1384</point>
+<point>54,-1368</point>
+<point>55,-1352</point>
+<point>56,-1336</point>
+<point>57,-1320</point>
+<point>58,-1304</point>
+<point>59,-1288</point>
+<point>60,-1272</point>
+<point>61,-1260</point>
+<point>62,-1248</point>
+<point>63,-1236</point>
+<point>64,-1224</point>
+<point>65,-1212</point>
+<point>66,-1200</point>
+<point>67,-1188</point>
+<point>68,-1176</point>
+<point>69,-1164</point>
+<point>70,-1152</point>
+<point>71,-1134</point>
+<point>72,-1116</point>
+<point>73,-1098</point>
+<point>74,-1080</point>
+<point>75,-1062</point>
+<point>76,-1044</point>
+<point>77,-1026</point>
+<point>78,-1008</point>
+<point>79,-990</point>
+<point>80,-972</point>
+<point>81,-960</point>
+<point>82,-948</point>
+<point>83,-936</point>
+<point>84,-924</point>
+<point>85,-912</point>
+<point>86,-900</point>
+<point>87,-888</point>
+<point>88,-876</point>
+<point>89,-864</point>
+<point>90,-852</point>
+<point>91,-840</point>
+<point>92,-830</point>
+<point>93,-820</point>
+<point>94,-810</point>
+<point>95,-800</point>
+<point>96,-790</point>
+<point>97,-780</point>
+<point>98,-770</point>
+<point>99,-760</point>
+<point>100,-750</point>
+
+    </reference>
+    <reference name="MM">
+    <!-- Default Media reference Volume Curve -->
+ 		<point>0,-11500</point>
+<point>1,-5308</point>
+<point>2,-4898</point>
+<point>3,-4488</point>
+<point>4,-4248</point>
+<point>5,-4108</point>
+<point>6,-3878</point>
+<point>7,-3748</point>
+<point>8,-3618</point>
+<point>9,-3553</point>
+<point>10,-3494</point>
+<point>11,-3358</point>
+<point>12,-3222</point>
+<point>13,-3086</point>
+<point>14,-2950</point>
+<point>15,-2814</point>
+<point>16,-2678</point>
+<point>17,-2542</point>
+<point>18,-2406</point>
+<point>19,-2270</point>
+<point>20,-2134</point>
+<point>21,-2102</point>
+<point>22,-2070</point>
+<point>23,-2038</point>
+<point>24,-2006</point>
+<point>25,-1974</point>
+<point>26,-1942</point>
+<point>27,-1910</point>
+<point>28,-1878</point>
+<point>29,-1846</point>
+<point>30,-1814</point>
+<point>31,-1797</point>
+<point>32,-1780</point>
+<point>33,-1763</point>
+<point>34,-1746</point>
+<point>35,-1729</point>
+<point>36,-1712</point>
+<point>37,-1695</point>
+<point>38,-1678</point>
+<point>39,-1661</point>
+<point>40,-1644</point>
+<point>41,-1632</point>
+<point>42,-1620</point>
+<point>43,-1608</point>
+<point>44,-1596</point>
+<point>45,-1584</point>
+<point>46,-1572</point>
+<point>47,-1560</point>
+<point>48,-1548</point>
+<point>49,-1536</point>
+<point>50,-1524</point>
+<point>51,-1507</point>
+<point>52,-1490</point>
+<point>53,-1473</point>
+<point>54,-1456</point>
+<point>55,-1439</point>
+<point>56,-1422</point>
+<point>57,-1405</point>
+<point>58,-1388</point>
+<point>59,-1371</point>
+<point>60,-1354</point>
+<point>61,-1341</point>
+<point>62,-1328</point>
+<point>63,-1315</point>
+<point>64,-1302</point>
+<point>65,-1289</point>
+<point>66,-1276</point>
+<point>67,-1263</point>
+<point>68,-1250</point>
+<point>69,-1237</point>
+<point>70,-1224</point>
+<point>71,-1206</point>
+<point>72,-1188</point>
+<point>73,-1170</point>
+<point>74,-1152</point>
+<point>75,-1134</point>
+<point>76,-1116</point>
+<point>77,-1098</point>
+<point>78,-1080</point>
+<point>79,-1062</point>
+<point>80,-1044</point>
+<point>81,-1032</point>
+<point>82,-1020</point>
+<point>83,-1008</point>
+<point>84,-996</point>
+<point>85,-984</point>
+<point>86,-972</point>
+<point>87,-960</point>
+<point>88,-948</point>
+<point>89,-936</point>
+<point>90,-924</point>
+<point>91,-913</point>
+<point>92,-905</point>
+<point>93,-897</point>
+<point>94,-889</point>
+<point>95,-881</point>
+<point>96,-873</point>
+<point>97,-865</point>
+<point>98,-857</point>
+<point>99,-848</point>
+<point>100,-840</point>
+    </reference>
+</volumes>
