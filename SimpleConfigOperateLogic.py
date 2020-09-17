@@ -6,17 +6,21 @@ import re # 正则表达式包
 import xlrd # 读取excel表格的包
 import logging
 from Write_ConfigData_ini import Write_ConfigData_ini
+from UI.LableFrameItem.LoadIniFile import LoadIniFile
 
 class SimpleConfigOperateLogic:
   __father = None
   __simpleConfigArea = None
   __mywrite_ConfigData_ini = None
+  __my_loadIniFile = None
+
 
   def __init__(self, father):
     super().__init__()
     self.__father = father
     self.__simpleConfigArea = self.__father.simpleConfigArea
     self.__mywrite_ConfigData_ini = Write_ConfigData_ini.getInstance(self.__simpleConfigArea)
+    self.__my_loadIniFile = LoadIniFile(self.__simpleConfigArea)
 
   def generate(self):
     self.__copyAllFilesToSpecifiedPath()
@@ -159,4 +163,10 @@ class SimpleConfigOperateLogic:
     except Exception:
       logging.error('复制logo文件失败...')
 
+  def load_configData_ini(self):
+    print('auto load_configData_ini...')
+
+    configDataIniPath = self.__getBaseURL() + '\\Config\\ConfigData.ini'
+    print('configDataIniPath == ', configDataIniPath)
+    self.__my_loadIniFile.loadFile(configDataIniPath)
      

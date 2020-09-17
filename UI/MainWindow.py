@@ -58,6 +58,9 @@ class MainWindow:
     
     self.simpleConfigOperateLogic = SimpleConfigOperateLogic(self)
 
+    self.simpleConfigArea.addEventHandler('BaseComp_browsingOver_event', 
+                                            self.simpleConfigOperateLogic.load_configData_ini);
+
     self.simpleConfigArea.hideSelf()
 
     self.__bottomDividingLine = DividingLine(self.mainWindow, 0, 450)

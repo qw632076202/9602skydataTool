@@ -12,6 +12,7 @@ class ConfigArea:
   widgetsContainer = NONE
   sonComponentMap = NONE
   configAreaName = None
+  eventHandlerMap = None
   # sonComponentMap = {} , 这里遇到大坑，这是类成员变量，相当于c++类的static变量，是公用的，不是实例成员变量，md
 
   config_WriteEntryInfoToFile = NONE
@@ -23,6 +24,7 @@ class ConfigArea:
     self.sonComponentMap = {} # 这才是实例成员，实例成员变量要在__init__构造函数中定义，直接在外边定义的是类成员变量
     self.config_WriteEntryInfoToFile = NONE
     self.configAreaName = configAreaName
+    self.eventHandlerMap = {}
 
     self.__lableFrameItemFactory = LableFrameItemFactory()
 
@@ -51,6 +53,9 @@ class ConfigArea:
   def addSonComponentInMap(self, itemName, type):
     self.sonComponentMap[itemName] = self.__lableFrameItemFactory.createLableFrameItem(self,
                                             itemName, type)
+
+  def addEventHandler(self, event, handler):
+    self.eventHandlerMap[event] = handler
 
   def refreshPage(self):
     self.father.mainFrame.update()

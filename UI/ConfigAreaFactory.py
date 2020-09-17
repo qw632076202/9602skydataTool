@@ -52,3 +52,6 @@ class ConfigAreaFactory:
 
     simpleConfigArea.refreshPage()
     return simpleConfigArea
+
+  def testfunc(self):
+    print('BaseComp_button_click_event...')
