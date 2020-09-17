@@ -14,8 +14,8 @@ pyinstaller -F ./skydataTool.py -i ./icon/skydataTool3.ico --noconsole
 
 ## 程序结构
 - skydataTool.py：入口文件
-- Write_ConfigData_ini.py
-- SimpleConfigOperateLogic.py
+- Write_ConfigData_ini.py：用于将simpleConfigArea中显示的内容写进configData.ini文件中
+- SimpleConfigOperateLogic.py：
 - DetailConfigOperateLogic.py
 - GetDataFromExcel.py
 - DynamicRenderItem.py：用于实现动态渲染的，暂未使用
