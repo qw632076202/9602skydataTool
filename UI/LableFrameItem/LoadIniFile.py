@@ -18,26 +18,26 @@ class LoadIniFile:
       self.__myWrite_ConfigData_ini = Write_ConfigData_ini.getInstance(self.__configArea)
 
   def loadFile(self, filePath):
-    strList = self.getStrListFromPIDIniFile(filePath)
+    strList = self.__get_strList_from_IniFile(filePath)
     self.__setItem_EntryValue_Map(strList)
     if (self.__configArea.configAreaName == 'detailConfig'):
       self.__renderDataToDetailConfigArea()
     elif (self.__configArea.configAreaName == 'simpleConfig'):
       self.__renderDataToSimpleConfigArea()
   
-  def getStrListFromPIDIniFile(self, filePath):
-    pidIniFile = None
+  def __get_strList_from_IniFile(self, filePath):
+    iniFile = None
     try:
-      pidIniFile = open(filePath, "r+", encoding = 'ascii')
-      strList = pidIniFile.readlines()
+      iniFile = open(filePath, "r+", encoding = 'utf8')
+      strList = iniFile.readlines()
       return strList
     except (FileExistsError,FileNotFoundError):
       print('打开PID.ini文件失败...')
       logging.error('打开PID.ini文件失败...')
       return []
     finally:
-      if (pidIniFile != None):
-        pidIniFile.close()
+      if (iniFile != None):
+        iniFile.close()
 
   def __setItem_EntryValue_Map(self, strList):
     for str1 in strList:

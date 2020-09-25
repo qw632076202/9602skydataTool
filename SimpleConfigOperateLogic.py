@@ -163,10 +163,38 @@ class SimpleConfigOperateLogic:
     except Exception:
       logging.error('复制logo文件失败...')
 
+  def __get_configDataIniURL_from_PIDiniFile(self):
+    configData_ini_URL = ''
+    pidIniFilePath = ''
+    pidIniFile = None
+    for itemName in self.__simpleConfigArea.sonComponentMap:
+      if (itemName == 'PID'):
+        pidIniFilePath = self.__simpleConfigArea.sonComponentMap[itemName].firstEntryStrVar.get()
+        break
+
+    try:
+      pidIniFile = open(pidIniFilePath, "r+", encoding = 'ascii')
+      strList = pidIniFile.readlines()
+      for oneStr in strList:
+        if (self.__get_URLAndItemName_FromStr(oneStr) != None and self.__get_URLAndItemName_FromStr(oneStr) != ''):
+          itemName = self.__get_URLAndItemName_FromStr(oneStr)[1]
+          URL = self.__get_URLAndItemName_FromStr(oneStr)[0]
+          if (itemName == 'Config'):
+            configData_ini_URL = URL
+            break
+    except (FileExistsError, FileNotFoundError):
+      self.__father.bottomArea.stateStrVar.set('打开PID.ini文件失败...')
+      print('打开PID.ini文件失败...')
+      logging.error('打开PID.ini文件失败...')
+    finally:
+      if (pidIniFile != None):
+        pidIniFile.close()
+        return configData_ini_URL
+
   def load_configData_ini(self):
     print('auto load_configData_ini...')
-
-    configDataIniPath = self.__getBaseURL() + '\\Config\\ConfigData.ini'
+    configDataIni_relative_path = self.__get_configDataIniURL_from_PIDiniFile();
+    configDataIniPath = self.__getBaseURL() + configDataIni_relative_path + '/configData.ini'
     print('configDataIniPath == ', configDataIniPath)
     self.__my_loadIniFile.loadFile(configDataIniPath)
      

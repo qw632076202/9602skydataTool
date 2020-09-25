@@ -13,7 +13,7 @@ from SimpleConfigOperateLogic import *
 
 class MainWindow:
   mainWindow = NONE
-  __SkyDataToolVersion = '2020-9-18'
+  __SkyDataToolVersion = '2020-9-24'
 
   __mainWindowWidth = 0
   __mainWindowHeight = 0
