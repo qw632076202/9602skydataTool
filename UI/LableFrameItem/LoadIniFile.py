@@ -79,13 +79,15 @@ class LoadIniFile:
       elif (item == 'COUNTRY'):
         if (hasattr( self.__configArea.sonComponentMap[item], 'firstEntryStrVar')):
           if (item in self.item_EntryValue_Map):
+            area = self.__configArea.sonComponentMap['AREA'].firstEntryStrVar.get()
             self.__configArea.sonComponentMap[item].firstEntryStrVar.set(
-                      self.__myWrite_ConfigData_ini.code_CountryORLanguage_Map[self.item_EntryValue_Map[item]])
+                      self.__myWrite_ConfigData_ini.code_CountryORLanguage_Maps[area][self.item_EntryValue_Map[item]])
       elif (item == 'LANGUAGE'):
         if (hasattr( self.__configArea.sonComponentMap[item], 'firstEntryStrVar')):
           if (item in self.item_EntryValue_Map):
+            area = self.__configArea.sonComponentMap['AREA'].firstEntryStrVar.get()
             self.__configArea.sonComponentMap[item].firstEntryStrVar.set(
-                      self.__myWrite_ConfigData_ini.code_CountryORLanguage_Map[self.item_EntryValue_Map[item]])
+                      self.__myWrite_ConfigData_ini.code_CountryORLanguage_Maps[area][self.item_EntryValue_Map[item]])
       elif (item == 'CustomerID'):
         if (hasattr( self.__configArea.sonComponentMap[item], 'firstEntryStrVar')):
           if (item in self.item_EntryValue_Map):

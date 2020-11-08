@@ -9,16 +9,16 @@ import time
 class Write_ConfigData_ini:
   myInstance = None
   __simpleConfigArea = None
-  __countryORLanguage_Code_Map = None
-  code_CountryORLanguage_Map = None
+  __countryORLanguage_Code_Maps = None
+  code_CountryORLanguage_Maps = None
   customID_shortCustomID_Map = None
   shortCustomID_customID_Map = None
 
   def __init__(self, simpleConfigArea):
     super().__init__()
     self.__simpleConfigArea = simpleConfigArea
-    self.__countryORLanguage_Code_Map = {}
-    self.code_CountryORLanguage_Map = {}
+    self.__countryORLanguage_Code_Maps = {}
+    self.code_CountryORLanguage_Maps = {}
     self.customID_shortCustomID_Map = {}
     self.shortCustomID_customID_Map = {}
     self.__set_countryORLanguage_Code_Map()
@@ -33,15 +33,21 @@ class Write_ConfigData_ini:
   def __putAAreaDataToMap(self, area):
     countrykeys = GetDataFromExcel.getCountryORLanguage(area, 'country', 0)[0]
     countryvalues = GetDataFromExcel.getCountryORLanguage(area, 'country', 1)[0]
+    tempMap = {}
+    tempMap1 = {}
     for i in range(min(len(countrykeys), len(countryvalues))):
-      self.__countryORLanguage_Code_Map[countrykeys[i]] = countryvalues[i]
-      # self.code_CountryORLanguage_Map[countryvalues[i]] = countrykeys[i]
+      if(countrykeys[i]):
+        tempMap[countrykeys[i]] = countryvalues[i]
+        tempMap1[countryvalues[i]] = countrykeys[i]
 
     languagekeys = GetDataFromExcel.getCountryORLanguage(area, 'language', 0)[0]
     languagevalues = GetDataFromExcel.getCountryORLanguage(area, 'language', 1)[0]
     for i in range(min(len(languagekeys), len(languagevalues))):
-      self.__countryORLanguage_Code_Map[languagekeys[i]] = languagevalues[i]
-      # self.code_CountryORLanguage_Map[languagevalues[i]] = languagekeys[i]
+      if(languagekeys[i]):
+        tempMap[languagekeys[i]] = languagevalues[i]
+        tempMap1[languagevalues[i]] = languagekeys[i]
+    self.__countryORLanguage_Code_Maps[area] = tempMap
+    self.code_CountryORLanguage_Maps[area] = tempMap1
 
   def __set_countryORLanguage_Code_Map(self):
     areaList = ['亚太&欧洲', '南美', '北美', '香港', '台湾']
@@ -53,7 +59,7 @@ class Write_ConfigData_ini:
     shortCustomerID = GetDataFromExcel.getBrandORCustomerID('ShortCustomerID')[0]
     for i in range(len(customID)):
       self.customID_shortCustomID_Map[customID[i]] = shortCustomerID[i]
-      # self.shortCustomID_customID_Map[shortCustomerID[i]] = customID[i] 这里不要load功能了，就不需要这个反向map
+      self.shortCustomID_customID_Map[shortCustomerID[i]] = customID[i]
 
   def write_ConfigData_ini(self, specifiedPath):
     configDataIniPath = specifiedPath + '\\Config\\ConfigData.ini'
@@ -74,13 +80,15 @@ class Write_ConfigData_ini:
         elif (itemName == 'COUNTRY'):
           configDataIniString +=('[' + itemName+ ']\n')
           countryKey = self.__simpleConfigArea.sonComponentMap[itemName].firstEntryStrVar.get()
-          countryCode = self.__countryORLanguage_Code_Map[countryKey]
+          area = self.__simpleConfigArea.sonComponentMap['AREA'].firstEntryStrVar.get()
+          countryCode = self.__countryORLanguage_Code_Maps[area][countryKey]
           configDataIniString +=(itemName + ' = ' + countryCode + '\n')
         elif (itemName == 'LANGUAGE'):
           configDataIniString +=('[' + itemName+ ']\n')
-          countryKey = self.__simpleConfigArea.sonComponentMap[itemName].firstEntryStrVar.get()
-          countryCode = self.__countryORLanguage_Code_Map[countryKey]
-          configDataIniString +=(itemName + ' = ' + countryCode + '\n')
+          languageKey = self.__simpleConfigArea.sonComponentMap[itemName].firstEntryStrVar.get()
+          area = self.__simpleConfigArea.sonComponentMap['AREA'].firstEntryStrVar.get()
+          languageCode = self.__countryORLanguage_Code_Maps[area][languageKey]
+          configDataIniString +=(itemName + ' = ' + languageCode + '\n')
         elif (itemName == 'AREA'):
           pass
         elif (itemName == 'PID'):
